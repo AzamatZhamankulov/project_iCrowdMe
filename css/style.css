@@ -34,12 +34,16 @@ body {
   display: inline-block;
   margin-right: 30px;
   text-transform: uppercase;
-  color: #666666;
-  font-size: 14px;
 }
 
 .nav_items:last-child {
   margin-right: 0;
+}
+
+.nav_links {
+  text-decoration: none;
+  color: #666666;
+  font-size: 14px;
 }
 
 .banner_wrapper {
