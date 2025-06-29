@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -53,7 +55,7 @@ body {
   color: #fff;
   padding-top: 164px;
   text-align: center;
-  
+
 }
 
 .banner_title {
@@ -120,6 +122,7 @@ main {
 
 .blocks_wrapper {
   background: linear-gradient(to right, #e2f8ff 0%, #e2f8ff 50%, #f5f9eb 50%, #f5f9eb 100%);
+  margin-bottom: 80px;
 }
 
 .blocks {
@@ -130,6 +133,7 @@ main {
 .block {
   flex-basis: 50%;
   padding-left: 180px;
+  position: relative;
 }
 
 .block_title {
@@ -157,39 +161,42 @@ main {
 
 }
 
-.block_btn_member {  
-  background-color: #26a6d1;  
+.block_btn_member {
+  background-color: #26a6d1;
 }
 
-.block_btn_submit {  
-  background-color: #add136;  
+.block_btn_submit {
+  background-color: #add136;
 }
 
-.properties::before {
-  content: "";
-  display: inline-block;
-  min-width: 134px;
-  height: 113px;
-  background: url('/images/img_sofa_lamp.png') 0 0 no-repeat;
-  position: relative;
-  left: -180px;
-  top: 200px;
-}
-
+.properties::before,
 .buyers::before {
   content: "";
   display: block;
-  min-width: 134px;
+  width: 134px;
   height: 113px;
-  background: url('/images/img_wallet.png') 0 0 no-repeat;
-  position: relative;
-  left: -160px;
-  top: 200px;
+  background-size: contain;
+  position: absolute;
+  /* changed from relative */
+  left: 30px;
+  /* adjust as needed */
+  top: 47%;
+  /* vertically center */
+  transform: translateY(-50%);
+}
+
+.properties::before {
+  background: url('/images/img_sofa_lamp.png') no-repeat;
+}
+
+.buyers::before {
+  background: url('/images/img_wallet.png') no-repeat;
 }
 
 /* It is practice code and nothing related to the project it should be commented all time */
 
 /* .pricing_block {
+
   background: #e7e7e7;
   padding: 54px 0 42px;
   margin-bottom: 10px;
@@ -265,3 +272,131 @@ main {
   align-self: center;
   margin-top: auto;
 } */
+
+.section_projects {
+  margin-bottom: 85px;
+}
+
+.section_title {
+  font-size: 29px;
+  font-weight: normal;
+  margin: 0 auto 30px;
+  padding: 0;
+  text-align: center;
+}
+
+.section_descr {
+  font-size: 17px;
+  margin: 0 0 40px;
+  padding: 0;
+}
+
+.projects_blocks {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project_block {
+  position: relative;
+  width: 30%;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project_block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 74px;
+  height: 74px;
+  background: url('/images/sticker_NEW.png') 0 0 no-repeat;
+  background-size: contain;
+  z-index: 2;
+}
+
+.block_img-1 {
+  background: url('/images/city-1.png') 50% 50% no-repeat;
+  height: 230px;
+}
+
+.block_img-2 {
+  background: url('/images/city-2.png') 50% 50% no-repeat;
+  height: 230px;
+}
+
+.block_img-3 {
+  background: url('/images/city-3.png') 50% 50% no-repeat;
+  height: 230px;
+}
+
+.price_btn {
+  display: inline-block;
+  background: #26a6d1;
+  color: #fff;
+  font-size: 16px;
+  padding: 12px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 160px 0 0 120px;
+}
+
+.price_btn span {
+  font-weight: bold;
+}
+
+.project_title {
+  font-size: 17px;
+  font-weight: bold;
+  margin: 30px 22px 0;
+  padding: 0;
+}
+
+.project_descr {
+  font-size: 14px;
+  font-weight: normal;
+  margin: 20px 22px 25px;
+}
+
+.project_link {
+  text-align: right;
+  margin: auto 22px 25px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #484848;
+  text-transform: capitalize;
+  padding: 25px 0 0;
+  border-top: 1px solid grey;
+}
+
+.project_link::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url('/images/icon_right-arrow.png') 0 0 no-repeat;
+  margin: 0 0 -2px 15px;
+}
+
+footer {
+  padding: 28.4px 0;
+  background-color: #ededed;
+  color: #484848;
+}
+
+.footer_info {
+  font-size: 14px;
+  text-align: center;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.footer_info a {
+  text-decoration: none;
+  color: #484848;
+
+}
